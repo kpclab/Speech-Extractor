@@ -26,7 +26,7 @@
 
 > 本ツールはフレーズまたは文章単位で音声素材を抽出するため、ロールプレイやラップ制作など、セリフを並べて使用する用途に最適化されています。発音矯正用としては、音節単位で分割できるOrange0929さんの [source extractor](https://github.com/Orange0929/Source_extractor)の使用をおすすめします。
 
-> コードなどに関するお問い合わせは、[DCinside合成・動画チャンネルの投稿](https://gall.dcinside.com)にコメントをお寄せください。
+> コードなどに関するお問い合わせは、[DCinside合成・動画チャンネルの投稿](https://gall.dcinside.com/videocomp/7138)にコメントをお寄せください。
 
 ## 概要と機能
 
