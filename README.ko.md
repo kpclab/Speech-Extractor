@@ -26,7 +26,7 @@
 
 > 본 추출기는 절이나 문장 단위로 소스를 추출하므로 상황극, 랩 제작 등 대사나열에 최적화되어 있습니다. 발음 조교용으로는 음절 단위로 분리하는 렌지 님의 [source extractor](https://github.com/Orange0929/Source_extractor) 사용을 추천 드립니다.
 
-> 코드 등 문의에 관해서는 [디시인사이드 합성-영상 게시글](https://gall.dcinside.com/videocomp)에 댓글로 남겨주세요.
+> 코드 등 문의에 관해서는 [디시인사이드 합성-영상 게시글](https://gall.dcinside.com/videocomp/7138)에 댓글로 남겨주세요.
 
 ## 소개 및 기능
 
