@@ -1,0 +1,50 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "speech-extractor"
+version = "1.0.0"
+description = "Cross-platform Whisper proofreading and WAV source-fragment exporter"
+requires-python = ">=3.10,<3.13"
+readme = "README.md"
+license = { text = "MIT" }
+dependencies = [
+    "PySide6>=6.7,<7",
+    "av>=14.0,<19",
+    "faster-whisper>=1.1.0",
+    "ctranslate2>=4.5",
+    "orjson>=3.10",
+    "send2trash>=1.8.3",
+    # Use send2trash's modern Windows IFileOperation backend instead of the
+    # legacy SHFileOperation fallback, which can fail with ERROR_BAD_PATHNAME
+    # (WinError 161) on some project-folder paths.
+    "pywin32>=306; sys_platform == 'win32'",
+    "huggingface-hub>=0.23",
+    "numpy>=1.26",
+    "transformers>=4.45,<5",
+    "torch>=2.2",
+    # Windows CTranslate2 GPU runtime libraries. These are kept inside the
+    # project environment so users do not need a system-wide CUDA Toolkit.
+    # cuBLAS is pinned to NVIDIA's own index below because the newest PyPI
+    # release may omit a win_amd64 wheel even when older Windows wheels exist.
+    # If there's an error installing nvidia-cublas-cu12 on Windows,
+    # change "nvidia-cublas-cu12>=12.8,<13" to "nvidia-cublas-cu12==12.9.2.10"
+    "nvidia-cublas-cu12>=12.8,<13; sys_platform == 'win32'",
+    "nvidia-cuda-runtime-cu12>=12.8,<13; sys_platform == 'win32'",
+    "nvidia-cudnn-cu12>=9,<10; sys_platform == 'win32'",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+# NVIDIA publishes platform-specific CUDA wheels on its own simple index.
+# In particular, PyPI's nvidia-cublas-cu12 12.9.3.13 currently has Linux
+# wheels only; the NVIDIA index also provides the Windows wheel for 12.9.2.10.
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com"
+explicit = true
+
+[tool.uv.sources]
+nvidia-cublas-cu12 = { index = "nvidia" }
