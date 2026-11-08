@@ -26,7 +26,7 @@
 
 > This extractor extracts sources in phrase or sentence units, making it optimized for dialogue-based content such as roleplay scenarios and rap production. For pronunciation training purposes, we recommend using Orange0929's [source extractor](https://github.com/Orange0929/Source_extractor), which splits audio into syllable-level units.
 
-> For inquiries regarding the code or other matters, please leave a comment at [this DCinside post](https://gall.dcinside.com/videocomp/).
+> For inquiries regarding the code or other matters, please leave a comment at [this DCinside post](https://gall.dcinside.com/videocomp/7138).
 
 ## Introduction
 
